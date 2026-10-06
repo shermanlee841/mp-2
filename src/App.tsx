@@ -13,7 +13,7 @@ export type Person = {
 }
 
 const ParentDiv = styled.div`
-    width: 80vw;
+    width: auto;
     margin: auto;
     border: 5px darkgoldenrod solid;
 `;
