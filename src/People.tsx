@@ -14,7 +14,7 @@ const PeopleContainer = styled.div`
 `
 
 const PersonCard = styled.div`
-    width: 250px;
+    flex: 1 1 250px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
