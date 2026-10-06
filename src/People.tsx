@@ -8,10 +8,13 @@ type PeopleProps = {
 const PeopleContainer = styled.div`
     width: 80vw;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 `
 
 const PersonCard = styled.div`
-    margin: 20px 0;
+    width: 250px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
