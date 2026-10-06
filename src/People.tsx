@@ -13,6 +13,17 @@ const PeopleContainer = styled.div`
     gap: 20px;
 `
 
+const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
+`
+
+const PeopleGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+`
+
 const PersonCard = styled.div`
     flex: 1 1 250px;
     padding: 20px;
@@ -26,17 +37,21 @@ const PersonName = styled.h2`
 function People({ data }: PeopleProps) {
     return (
         <PeopleContainer>
-            {data.map((person) => (
-                <PersonCard key = {person.name}>
-                    <PersonName>{person.name}</PersonName>
-                    <p>Height: {person.height}</p>
-                    <p>Mass: {person.mass}</p>
-                    <p>Hair Color: {person.hair_color}</p>
-                    <p>Eye Color: {person.eye_color}</p>
-                    <p>Birth Year: {person.birth_year}</p>
-                    <p>Gender: {person.gender}</p>
-                </PersonCard>
-            ))}
+            <Title>Star Wars Character Facts</Title>
+
+            <PeopleGrid>
+                {data.map((person) => (
+                    <PersonCard key = {person.name}>
+                        <PersonName>{person.name}</PersonName>
+                        <p>Height: {person.height}</p>
+                        <p>Mass: {person.mass}</p>
+                        <p>Hair Color: {person.hair_color}</p>
+                        <p>Eye Color: {person.eye_color}</p>
+                        <p>Birth Year: {person.birth_year}</p>
+                        <p>Gender: {person.gender}</p>
+                    </PersonCard>
+                ))}
+            </PeopleGrid>
         </PeopleContainer>
     )
 }
